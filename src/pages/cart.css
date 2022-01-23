@@ -1,0 +1,163 @@
+.cart-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 200px;
+    background-color: #fcf5f5;
+}
+
+.cart-heading {
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-cart {
+    margin-right: 20px;
+    opacity: 0.5;
+}
+
+.order-value {
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#total {
+    letter-spacing: 2px;
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 100px;
+   
+}
+
+.top-div {
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcf5f5;
+    padding-bottom: 50px;
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+}
+
+.bottom-div {
+    display: flex;
+    width: 100%;
+}
+
+
+.main {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcf5f5;
+}
+
+aside {
+    width: 30%;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.black-line {
+    width:70%;
+    height: 0.8px;
+    margin-top: 20px;
+    background-color: black;
+}
+
+.checkout-btn {
+    background: teal;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+    width: 70%;
+    margin-top: 30px;
+    
+}
+
+.checkout-btn:hover {
+    opacity: 0.8;
+}
+
+.payment-methods {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+    
+}
+
+.payment-heading {
+    margin-bottom: 0px;
+}
+
+.payment-logos {
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    margin-top: 0px;
+    width: 40px;
+    margin-right: 3px;
+}
+
+.payment {
+    margin-top: 0;
+    width: 50px;
+    margin-right: 3px;
+}
+
+.return-policy {
+    font-size: 15px;
+    width: 300px;
+    margin-bottom: 0px;
+}
+
+.return-underline {
+    margin-top: 0px;
+    text-decoration: underline;
+    cursor: pointer;
+}

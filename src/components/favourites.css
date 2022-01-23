@@ -1,0 +1,112 @@
+
+.fav-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    background-color: #fcf5f5;
+    padding-bottom: 50px;
+  
+    
+}
+
+.fav-container {
+    width: 23%;
+    height: 500px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 150px;
+    background-color: whitesmoke;
+    margin-top: 30px;
+    position: relative;
+   
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.img-overlay:hover {
+    opacity: 1;
+}
+
+.cart-plus {
+    font-size: 60px;
+    color: white;
+    opacity: 0.5;   
+}
+
+.addCart {
+    color: white;
+    opacity: 0.8;
+    font-size: 30px;
+}
+
+.fav-container img {
+    max-width: 100%;
+    height: 100%;
+    object-fit:cover; 
+    z-index: -1;
+    cursor: pointer;
+   
+}
+
+
+
+.fav-title {
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.fav-price {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    z-index: 6;
+    color: black;
+    margin-top: 0px;
+}
+
+
+.heart {
+    font-size: 25px;
+    z-index: 10!important;
+    cursor: pointer;
+    margin-right: 20px;
+    color: red;
+  
+}
+
+.red-heart {
+    font-size: 25px;
+    z-index: 10!important;
+    cursor: pointer;
+    color: black;
+    margin-right: 20px;
+}
+
+.red-heart:hover {
+    color: red;
+}
+
+.heart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+

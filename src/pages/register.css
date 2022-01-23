@@ -1,0 +1,71 @@
+.register-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(63, 58, 58, 0.5),rgba(2, 1, 1, 0.5)),url(../assets/redHair.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+}
+
+.create-heading {
+    font-size: 50px;
+    letter-spacing: 3px;
+    color: #fcf5f5;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    flex-wrap: wrap;
+   
+}
+
+.field {
+    font-size: 20px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    background-color: #fcf5f5;
+   
+}
+
+#checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+.create-btn {
+    background: teal;
+    border: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+    width: 200px;
+    transition: 0.2s ease-in-out;
+    margin-right: 300px;
+}
+
+.create-btn:hover {
+    opacity: 0.7;
+}
+
+.privacy-policy {
+    width: 78%;
+    text-align: left;
+    color: #fcf5f5;
+    margin-bottom: 30px;
+}

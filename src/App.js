@@ -5,7 +5,7 @@ import Women from './pages/Women';
 import Accessories from './pages/Accessories';
 import Men from './pages/Men';
 import Register from './pages/Register';
-import Login from './pages/Login';
+import Login from './pages/login/Login';
 import Cart from './pages/Cart';
 import WishList from './pages/WishList';
 import Members from './pages/Members';

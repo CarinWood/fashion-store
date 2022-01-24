@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Navbar from '../components/navbar/Navbar';
-import '../components/login.css';
-import Footer from '../components/footer/Footer';
+import Navbar from '../../components/navbar/Navbar';
+import './login.css';
+import Footer from '../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
 
 

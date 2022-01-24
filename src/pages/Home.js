@@ -4,7 +4,7 @@ import FavProducts from '../components/FavProducts';
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter';
 import Slider from '../components/Slider';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import { useState } from 'react';
 import {Favies} from '../components/ProductData';
 

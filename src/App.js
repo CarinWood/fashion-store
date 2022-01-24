@@ -6,7 +6,7 @@ import Accessories from './pages/Accessories';
 import Men from './pages/Men';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
-import Cart from './pages/Cart';
+import Cart from './pages/cart/Cart';
 import WishList from './pages/WishList';
 import Members from './pages/Members';
 

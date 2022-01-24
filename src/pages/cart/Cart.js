@@ -1,12 +1,12 @@
 import React from 'react'
-import Footer from '../components/footer/Footer'
-import Navbar from '../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
+import Navbar from '../../components/navbar/Navbar'
 import './cart.css'
 import { Link } from 'react-router-dom'
-import Visa from '../assets/visa.png';
-import Mastercard from '../assets/mastercard.png';
-import American from '../assets/american.png'
-import Paypal from '../assets/paypal.png';
+import Visa from '../../assets/visa.png';
+import Mastercard from '../../assets/mastercard.png';
+import American from '../../assets/american.png'
+import Paypal from '../../assets/paypal.png';
 import { FaShoppingCart} from 'react-icons/fa';
 
 const Cart = () => {

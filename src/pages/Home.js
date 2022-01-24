@@ -1,5 +1,5 @@
 import React from 'react';
-import Categories from '../components/Categories';
+import Categories from '../components/categories/Categories';
 import FavProducts from '../components/FavProducts';
 import Navbar from '../components/navbar/Navbar'
 import Newsletter from '../components/newsletter/Newsletter';

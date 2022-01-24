@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaPinterestP, FaYoutube } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <div className='footer-container'>
@@ -21,7 +21,9 @@ const Footer = () => {
             </p>
                 <a className='read-more' href="#">Read More</a>
 
+            <Link className='logo-link' to="/">
             <h2 className='logo'>Clothes4You</h2>
+            </Link>
 
             <p id="copyright">Created and Built by Carin Wood</p>
         </div>

@@ -43,3 +43,7 @@
     margin-right: 30px;
     cursor: pointer;
 }
+
+.logo-link {
+    text-decoration: none;
+}

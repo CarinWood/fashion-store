@@ -7,7 +7,7 @@ import Men from './pages/Men';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Cart from './pages/cart/Cart';
-import WishList from './pages/WishList';
+import WishList from './pages/wishlist/WishList';
 import Members from './pages/members/Members';
 
 

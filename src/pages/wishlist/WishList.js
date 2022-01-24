@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../components/footer/Footer'
-import Navbar from '../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
+import Navbar from '../../components/navbar/Navbar'
 import './wishlist.css'
 import { FaRegHeart} from 'react-icons/fa';
 

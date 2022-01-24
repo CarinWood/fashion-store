@@ -1,6 +1,6 @@
 import React from 'react';
 import Categories from '../components/categories/Categories';
-import FavProducts from '../components/FavProducts';
+import FavProducts from '../components/favourites/FavProducts';
 import Navbar from '../components/navbar/Navbar'
 import Newsletter from '../components/newsletter/Newsletter';
 import Slider from '../components/slider/Slider';

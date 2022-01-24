@@ -1,5 +1,5 @@
 import React from 'react';
-import {Favies} from './data/ProductData';
+import {Favies} from '../data/ProductData';
 import FavProduct from './FavProduct';
 import './favourites.css';
 

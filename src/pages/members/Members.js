@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '../components/footer/Footer'
+import Footer from '../../components/footer/Footer'
 import './members.css'
-import Navbar from '../components/navbar/Navbar'
+import Navbar from '../../components/navbar/Navbar'
 
 const Members = () => {
     return (

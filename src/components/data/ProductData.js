@@ -1,9 +1,9 @@
-import furHat from '../assets/furHat.jpg'
-import summerHat from '../assets/summerHat.jpg'
-import toteBag from '../assets/toteBag.jpg';
-import blackBag from '../assets/blackBag.jpg'
-import dottedShirt from '../assets/shirt.jpg';
-import yellowDress from '../assets/yellowDress.jpg';
+import furHat from '../../assets/furHat.jpg'
+import summerHat from '../../assets/summerHat.jpg'
+import toteBag from '../../assets/toteBag.jpg';
+import blackBag from '../../assets/blackBag.jpg'
+import dottedShirt from '../../assets/shirt.jpg';
+import yellowDress from '../../assets/yellowDress.jpg';
 
 
 export const Favies = [

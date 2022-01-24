@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../components/footer/Footer'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar/Navbar'
 import './cart.css'
 import { Link } from 'react-router-dom'
 import Visa from '../assets/visa.png';

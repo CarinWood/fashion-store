@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { FaShoppingCart, FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
-import { Favies } from './ProductData';
-import SearchItems from './SearchItems';
+import { Favies } from '../data/ProductData';
+import SearchItems from '../SearchItems';
 
 
 const Navbar = () => {

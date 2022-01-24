@@ -1,6 +1,6 @@
-import Summer from '../assets/summerModel.png';
-import Autumn from '../assets/jacket.png';
-import Dress from '../assets/cuteDress.png';
+import Summer from '../../assets/summerModel.png';
+import Autumn from '../../assets/jacket.png';
+import Dress from '../../assets/cuteDress.png';
 
 
 export const images = [

@@ -1,6 +1,6 @@
-import tShirt from '../assets/tShirt.jpg';
-import Access from '../assets/accessories.jpg';
-import Men from '../assets/Men.jpg';
+import tShirt from '../../assets/tShirt.jpg';
+import Access from '../../assets/accessories.jpg';
+import Men from '../../assets/Men.jpg';
 
 
 

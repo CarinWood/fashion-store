@@ -1,5 +1,5 @@
-import Dress from '../assets/cuteDress.png'
-import PinkSkirt from '../assets/PinkSkirt.png';
+import Dress from '../../assets/cuteDress.png'
+import PinkSkirt from '../../assets/PinkSkirt.png';
 
 export const Clothes = [
     {

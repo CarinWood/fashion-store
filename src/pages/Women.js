@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar/Navbar';
-import WomenClothes from '../components/WomenClothes';
+import WomenClothes from '../components/women/WomenClothes';
 import Footer from '../components/footer/Footer';
 
 

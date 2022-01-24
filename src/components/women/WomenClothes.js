@@ -1,5 +1,5 @@
 import React from 'react';
-import Garment from './Garment';
+import Garment from '../Garment';
 import './women.css';
 import {Clothes} from './WomenData';
 

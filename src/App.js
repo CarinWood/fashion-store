@@ -4,7 +4,7 @@ import { Routes, Route} from 'react-router-dom';
 import Women from './pages/Women';
 import Accessories from './pages/Accessories';
 import Men from './pages/Men';
-import Register from './pages/Register';
+import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Cart from './pages/Cart';
 import WishList from './pages/WishList';

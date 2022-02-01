@@ -29,8 +29,14 @@ const FavProduct = ({favies}) => {
     const [isRed, setIsRed] = useState(false);
 
     function clickOnHeart(product) {
-       setIsRed(!isRed)
+        const existInWishlist = heartList.find((existingproduct) => product.title === existingproduct.title)
+       
+        if(existInWishlist) {
+            alert('item is already on your wishlist!')
+        } else {
+        setIsRed(!isRed)
        setHeartList([...heartList, {...product}])
+        }
     }
 
  

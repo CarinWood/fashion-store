@@ -7,6 +7,9 @@ import { WishListContext } from '../../context/WishListContext';
 
 const FavProduct = ({favies}) => {
 
+    
+    const [isRed, setIsRed] = useState(false);
+
     const [cart, setCart] = useContext(CartContext)
     const [heartList, setHeartList] = useContext(WishListContext);
 
@@ -20,22 +23,17 @@ const FavProduct = ({favies}) => {
           setCart([...cart, {...product, quantity: 1}])
         }
     }
-
-   
- 
-     
     
 
-    const [isRed, setIsRed] = useState(false);
 
     function clickOnHeart(product) {
-        const existInWishlist = heartList.find((existingproduct) => product.title === existingproduct.title)
-       
-        if(existInWishlist) {
-            alert('item is already on your wishlist!')
+        if(!isRed) {
+            setIsRed(true)
+            setHeartList([...heartList, {...product}])
+           
         } else {
-        setIsRed(!isRed)
-       setHeartList([...heartList, {...product}])
+            setIsRed(false)
+            setHeartList(heartList.filter((item) => product.title !== item.title ) )
         }
     }
 

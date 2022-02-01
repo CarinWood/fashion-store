@@ -28,7 +28,10 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  position: fixed;
+  Z-index: 100;
+  background-color: #fcf5f5;
+  margin-bottom: 100px;
   
 }
 

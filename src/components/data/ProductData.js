@@ -10,33 +10,37 @@ export const Favies = [
     {
         title: 'Dotted Shirt',
         img: dottedShirt,
-        price: '12.99',
+        price: '12',
         anchor: '#dottedshirt',
         id:"dottedshirt",
+        quantity: 1,
     }, 
     
     {
         title: 'Fur Hat',
         img: furHat,
-        price: '16.99',
+        price: '16',
         anchor: '#furhat',
         id:"furhat",
+        quantity: 1,
     },
 
     {
        title: 'Hand Bag',
        img: blackBag,
-       price: '13.99',
+       price: '13',
        anchor: '#blackbag',
        id:"blackbag",
+       quantity: 1,
     },
 
     {
         title: 'Dress',
         img: yellowDress,
-        price: '34.99',
+        price: '34',
         anchor:'#dress',
         id:"dress",
+        quantity: 1,
     },
 
     {
@@ -45,13 +49,15 @@ export const Favies = [
         price: '5',
         anchor:'#totebag',
         id:"totebag",
+        quantity: 1,
     },
 
     {
         title: 'Sun Hat',
         img: summerHat,
-        price: '54.99',
+        price: '54',
         anchor:'#sunhat',
         id:"sunhat",
+        quantity: 1,
     },
 ];

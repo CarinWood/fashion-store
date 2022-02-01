@@ -7,6 +7,7 @@ import Slider from '../components/slider/Slider';
 import Footer from '../components/footer/Footer';
 import { useState } from 'react';
 import {Favies} from '../components/data/ProductData';
+import './home.css';
 
 
 

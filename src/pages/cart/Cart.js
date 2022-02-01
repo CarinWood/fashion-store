@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import './cart.css'
@@ -7,14 +7,24 @@ import Visa from '../../assets/visa.png';
 import Mastercard from '../../assets/mastercard.png';
 import American from '../../assets/american.png'
 import Paypal from '../../assets/paypal.png';
-import { FaShoppingCart} from 'react-icons/fa';
+import { FaShoppingCart, FaTrashAlt} from 'react-icons/fa';
+import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from "react-icons/io";
+import { CartContext } from '../../context/CartContext'
 
 const Cart = () => {
 
-    const orderValue = 0;
-    const shippingCost = 0;
-    const total = 0;
+    const [cart, setCart] = useContext(CartContext);
+
+   
+    
+    const totalSum = cart.reduce((total, item) => total + item.quantity * item.price, 0);
+
+
     const AmountOfProducts = 0;
+
+    function checkOutMsg() {
+        alert("We hav successfully withdrawn $ " + totalSum + ' from you bankaccount')
+    }
 
 
 
@@ -24,7 +34,7 @@ const Cart = () => {
           
                 <div className='cart-container'>
                         <div className='top-div'>
-                            <h1 className='cart-heading'>Your Cart({AmountOfProducts})</h1>
+                           
 
                             <div className='link-wrapper'>
                                 <Link to="/">Continue Shopping</Link>
@@ -35,35 +45,49 @@ const Cart = () => {
                    
                         <div className='bottom-div'>
                         <div className="main">
-                        <h1 className='cart-heading'>
+                        {cart.length === 0 ?<h1 className='cart-heading'>
                         <FaShoppingCart className='my-cart'/> 
-                        Your cart is empty
-                            
-                        </h1>
-                            
+                        Your cart is empty </h1> : <></> }
+                         {cart.map((cartItem) => (
+                             <div className='displayed-product' key={cartItem.id}>
+                                 <div className='image-div'>
+                                     <img src={cartItem.img} alt={cartItem.title} />
+                                 </div>
+                                 <div>
+                                    <p>{cartItem.title}</p>   
+                                    <p>$ {cartItem.price}</p>
+                                    <FaTrashAlt id="trashy"/>
+                                    <div className='quantity-select'>
+                                       <IoMdArrowDropleftCircle id="leftarr"/> 
+                                       <p className='quantNum'>{cartItem.quantity}</p>
+                                       <IoMdArrowDroprightCircle id="rightarr" />
+                                    </div>
+                                </div>
+                             </div>
+                         ))}   
                           
                         </div>
 
                         <aside>
-                            <h1 className='cart-heading'>Order Summary</h1>
+                            <h1 className='cart-heading2'>Order Summary</h1>
 
                             <div className='order'>
                                 <p className='order-value'>
                                     Order value:
-                                    <span>$ {orderValue}</span>
+                                    <span>$ {totalSum}</span>
                                 </p>
 
                                 <p className='order-value'>
                                     Shipping cost:
-                                    <span>$ {shippingCost}</span>
+                                    <span>$ {cart.length === 0 ? 0 : 14}</span>
                                 </p>
                                 <div className='black-line'></div>
                                 <h3 id="total">
                                     Total:
-                                    <span>$ {total}</span>
+                                    <span>${cart.length > 0 ? totalSum + 14 : 0}</span>
                                 </h3>
                                 
-                            <button type="submit" className='checkout-btn'>Checkout</button>
+                            <button onClick={checkOutMsg} type="submit" className='checkout-btn'>Checkout</button>
                             </div>
 
 

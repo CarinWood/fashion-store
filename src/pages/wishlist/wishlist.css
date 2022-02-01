@@ -24,7 +24,11 @@
     text-align: center;
 }
 
-.wishlist-h {
+.wishlist-heading {
     margin-right: 10px;
     font-size: 25px;
+}
+
+.wish-img-div {
+    width: 25%;
 }

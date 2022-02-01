@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FaShoppingCart, FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 import { Favies } from '../data/ProductData';
 import SearchItems from '../search/SearchItems';
 import './navbar.css'
+import { CartContext } from '../../context/CartContext';
 
 
 const Navbar = () => {
+
+    const [cart, setCart] = useContext(CartContext)
 
     const [count, setCount] = useState(0)
     const [theValue, setTheValue] = useState('')
@@ -76,7 +79,7 @@ const Navbar = () => {
 
                     <Link to="/cart">
                     <FaShoppingCart id="cart"/>
-                    <p className='digit'>{count}</p>
+                    <p className='digit'>{cart.reduce((total, product) => total + product.quantity,0)}</p>
                     </Link>
                 </section>
             </div>

@@ -26,6 +26,10 @@ const Cart = () => {
         alert("We hav successfully withdrawn $ " + totalSum + ' from you bankaccount')
     }
 
+    const removeProd = (product) => {
+        setCart(cart.filter((item) => product.title !== item.title ) )
+    }
+
 
 
     return (
@@ -54,9 +58,9 @@ const Cart = () => {
                                      <img src={cartItem.img} alt={cartItem.title} />
                                  </div>
                                  <div>
-                                    <p>{cartItem.title}</p>   
-                                    <p>$ {cartItem.price}</p>
-                                    <FaTrashAlt id="trashy"/>
+                                    <h3 className='cartTitle'>{cartItem.title}</h3>   
+                                    <p className='cartPrice'>$ {cartItem.price}</p>
+                                    <FaTrashAlt id="trashy"onClick={() =>removeProd(cartItem)}/>
                                     <div className='quantity-select'>
                                        <IoMdArrowDropleftCircle id="leftarr"/> 
                                        <p className='quantNum'>{cartItem.quantity}</p>

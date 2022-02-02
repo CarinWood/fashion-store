@@ -176,23 +176,24 @@ aside {
 
 
 .displayed-product {
-    width: 300px;
-    height: auto;
+    width: 500px;
+    height: 200px; 
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 1px solid black;
     color: black;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .image-div {
-    width: 40%;
+    width: 150px;
+    height: 200px;
 }
 
 .image-div img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -201,6 +202,7 @@ aside {
     justify-content: center;
     align-items: center;
     font-size: 35px;
+    margin-left: 50px;
 }
 
 #leftarr {
@@ -230,4 +232,19 @@ aside {
 
 #trashy {
     position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.cartTitle {
+    margin-left: 50px;
+}
+
+.cartPrice {
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 600;
 }

@@ -4,15 +4,28 @@ import './wishlist.css'
 import { FaRegHeart, FaTrashAlt, FaShoppingCart} from 'react-icons/fa';
 import { WishListContext } from '../../context/WishListContext';
 import {useContext} from 'react'
-
+import { CartContext } from '../../context/CartContext';
 
 const WishList = () => {
 
+    const [cart, setCart] = useContext(CartContext)
     const [heartList, setHeartList] = useContext(WishListContext)
 
 
     function removeFromWishlist(product) {
         setHeartList(heartList.filter((item) => product.title !== item.title ) )
+    }
+
+    function addProduct(product) {
+        alert('Product has been added to your cart!')
+        const productExist = cart.find((item) => item.id === product.id)
+        if (productExist) {
+          setCart(cart.map((item) => item.id === product.id ? 
+          {...productExist, quantity: productExist.quantity + 1} : item))
+          removeFromWishlist(product)
+        } else {
+          setCart([...cart, {...product, quantity: 1}])
+        }
     }
 
 
@@ -37,7 +50,7 @@ const WishList = () => {
                                 <h2 className='wish-title'>{item.title}</h2>
                                 <h3>$ {item.price}</h3>
                                 <div className='trashcan-icon-div' onClick={() => removeFromWishlist(item)}><FaTrashAlt/></div>
-                                <button type="button" className='add-wish-btn'><FaShoppingCart className='cart-button-icon'/> Add to Cart</button>
+                                <button type="button" className='add-wish-btn' onClick={()=>addProduct(item)}><FaShoppingCart className='cart-button-icon'/> Add to Cart</button>
                         </div>
                     ))}
                     </div>

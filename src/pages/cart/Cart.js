@@ -60,11 +60,12 @@ const Cart = () => {
                                  <div>
                                     <h3 className='cartTitle'>{cartItem.title}</h3>   
                                     <p className='cartPrice'>$ {cartItem.price}</p>
-                                    <FaTrashAlt id="trashy"onClick={() =>removeProd(cartItem)}/>
+                                   
                                     <div className='quantity-select'>
                                        <IoMdArrowDropleftCircle id="leftarr"/> 
                                        <p className='quantNum'>{cartItem.quantity}</p>
                                        <IoMdArrowDroprightCircle id="rightarr" />
+                                       <button id="trashy"onClick={() =>removeProd(cartItem)}>Delete</button>
                                     </div>
                                 </div>
                              </div>

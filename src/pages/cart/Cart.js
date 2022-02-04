@@ -35,6 +35,26 @@ const Cart = () => {
         removeProd(heartObj);
     }
 
+    function handleAddProduct(product) {
+        const productExist = cart.find((item) => item.id === product.id)
+    if (productExist) {
+      setCart(cart.map((item) => item.id === product.id ? 
+      {...productExist, quantity: productExist.quantity + 1} : item))
+    } else {
+      setCart([...cart, {...product, quantity: 1}])
+    }
+
+    }
+
+    const handleRemoveProduct = (product) => {
+        const productExist = cart.find((item) => item.id === product.id)
+        if (productExist.quantity === 1) {
+              setCart(cart.filter((item) => item.id !== product.id ))
+        } else {
+          setCart(cart.map((item) => item.id == product.id ? {...productExist, quantity: productExist.quantity -1} : item ))
+        }
+      }
+
 
 
     return (
@@ -63,14 +83,14 @@ const Cart = () => {
                                      <img src={cartItem.img} alt={cartItem.title} />
                                  </div>
                                  <div>
-                                    <h3 className='cartTitle'>{cartItem.title}</h3>   
+                                    <h3 className='cartTitle'>{cartItem.title} <span className='prod-price'>($ {cartItem.price})</span></h3>   
                                   
                                    
                                     <div className='quantity-select'>
-                                       <div id="leftarr">-</div> 
+                                       <div id="minus-btn" onClick={() => handleRemoveProduct(cartItem)}>-</div> 
                                        <p className='quantNum'>{cartItem.quantity}</p>
-                                       <div id="rightarr">+</div>  
-                                       <p className='cartPrice'>$ {cartItem.price}</p>
+                                       <div id="plus-btn" onClick={() => handleAddProduct(cartItem)}>+</div>  
+                                       <p className='cartPrice'>$ {cartItem.price * cartItem.quantity}</p>
                                        <FaTrashAlt id="trashy"onClick={() =>removeProd(cartItem)}/>
                                     </div>
 

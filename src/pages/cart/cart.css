@@ -209,13 +209,21 @@ aside {
 .cartTitle {
     margin-left: 50px;
     margin-top: 0px;
-   
+    font-size: 20px;
+  
 }
 
 .cartPrice {
     margin-left: 50px;
     font-size: 20px;
     font-weight: 600;
+}
+
+.prod-price {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-left: 10px;
+    color: teal;
 }
 
 .quantity-select {
@@ -226,7 +234,7 @@ aside {
     margin-left: 50px;
 }
 
-#leftarr {
+#minus-btn {
     cursor: pointer;
     width: 25px;
     height: 25px;
@@ -237,11 +245,11 @@ aside {
     align-items: center;
 }
 
-#leftarr:active {
+#minus-btn:active {
     transform: translateY(2px);
 }
 
-#rightarr {
+#plus-btn {
     cursor: pointer;
     width: 25px;
     height: 25px;
@@ -253,7 +261,7 @@ aside {
   
 }
 
-#rightarr:active {
+#plus-btn:active {
     transform: translateY(2px);
 }
 
@@ -261,7 +269,7 @@ aside {
     cursor: pointer;
     width: 25px;
     height: 25px;
-    font-size: 20px;
+    font-size: 17px;
     border: 1px solid black;
     display: flex;
     justify-content: center;

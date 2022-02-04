@@ -95,7 +95,8 @@
 
 aside {
     width: 30%;
-    margin-right: 0px;
+    height: 75vh;
+    margin-right: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,27 +176,46 @@ aside {
 }
 
 
+/* Cart items */
+
+
 .displayed-product {
-    width: 500px;
-    height: 200px; 
+    padding: 20px;
+    width: 580px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     color: black;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     position: relative;
     background-color: #fff;
+    border-radius: 3px;
 }
 
 .image-div {
-    width: 150px;
-    height: 200px;
+    width: 120px;
+    height: 150px;
+    margin-bottom: 0px;
+   
 }
 
 .image-div img {
+    border-radius: 3px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.cartTitle {
+    margin-left: 50px;
+    margin-top: 0px;
+   
+}
+
+.cartPrice {
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .quantity-select {
@@ -208,6 +228,13 @@ aside {
 
 #leftarr {
     cursor: pointer;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #leftarr:active {
@@ -216,6 +243,14 @@ aside {
 
 #rightarr {
     cursor: pointer;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
 #rightarr:active {
@@ -223,26 +258,55 @@ aside {
 }
 
 .quantNum {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
     font-size: 20px;
-    font-weight: 600;
-    width: 20px;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #trashy {
-    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;   
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-
-}
-
-.cartTitle {
-    margin-left: 50px;
-}
-
-.cartPrice {
-    margin-left: 50px;
+    margin-left: 30px;
+    color: black;
+    opacity: 0.5;
     font-size: 20px;
-    font-weight: 600;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 10px 10px;
+
+}
+
+
+
+.heart-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px;
+  
+}
+
+.saveheart {
+    cursor: pointer;
+    margin: 0px;
+}
+
+.saveheart:hover {
+    color: red;
+}
+
+.save {
+    margin-left: 7px;
+ 
 }

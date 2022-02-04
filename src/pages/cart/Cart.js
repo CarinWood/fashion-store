@@ -7,14 +7,14 @@ import Visa from '../../assets/visa.png';
 import Mastercard from '../../assets/mastercard.png';
 import American from '../../assets/american.png'
 import Paypal from '../../assets/paypal.png';
-import { FaShoppingCart, FaTrashAlt} from 'react-icons/fa';
-import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from "react-icons/io";
+import { FaShoppingCart, FaRegHeart, FaTrashAlt} from 'react-icons/fa';
 import { CartContext } from '../../context/CartContext'
+import { WishListContext } from '../../context/WishListContext'
 
 const Cart = () => {
 
     const [cart, setCart] = useContext(CartContext);
-
+    const [heartList, setHeartList] = useContext(WishListContext);
    
     
     const totalSum = cart.reduce((total, item) => total + item.quantity * item.price, 0);
@@ -28,6 +28,11 @@ const Cart = () => {
 
     const removeProd = (product) => {
         setCart(cart.filter((item) => product.title !== item.title ) )
+    }
+
+    function clickOnHeart(heartObj) {
+        setHeartList([...heartList, {...heartObj}])
+        removeProd(heartObj);
     }
 
 
@@ -59,13 +64,19 @@ const Cart = () => {
                                  </div>
                                  <div>
                                     <h3 className='cartTitle'>{cartItem.title}</h3>   
-                                    <p className='cartPrice'>$ {cartItem.price}</p>
+                                  
                                    
                                     <div className='quantity-select'>
-                                       <IoMdArrowDropleftCircle id="leftarr"/> 
+                                       <div id="leftarr">-</div> 
                                        <p className='quantNum'>{cartItem.quantity}</p>
-                                       <IoMdArrowDroprightCircle id="rightarr" />
-                                       <button id="trashy"onClick={() =>removeProd(cartItem)}>Delete</button>
+                                       <div id="rightarr">+</div>  
+                                       <p className='cartPrice'>$ {cartItem.price}</p>
+                                       <FaTrashAlt id="trashy"onClick={() =>removeProd(cartItem)}/>
+                                    </div>
+
+                                    <div className='heart-div'>
+                                    <FaRegHeart className='saveheart' onClick={() => clickOnHeart(cartItem)}/>
+                                    <p className='save'>Save for later</p>
                                     </div>
                                 </div>
                              </div>

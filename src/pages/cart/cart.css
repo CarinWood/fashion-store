@@ -243,6 +243,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px 0px 0px 4px;
 }
 
 #minus-btn:active {
@@ -258,6 +259,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0px 4px 4px 0px;
   
 }
 

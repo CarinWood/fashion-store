@@ -16,18 +16,21 @@ const Navbar = () => {
     const [isVisible, setIsVisible] = useState(false)
 
    const handleOnChange = (e) => {
-       setTheValue(e.target.value)     
+       setTheValue(e.target.value) 
+         
    }
+
+   function clear() {
+       setTheValue('')
+   }
+
+   const displayResults = theValue.length > 0
 
    const filteredFavies = Favies.filter(Fav => {
        return Fav.title.toLowerCase().includes(theValue.toLowerCase())
    })
 
-   function clickMagnifyer() {
-       
-    setIsVisible(!isVisible)
-   }
-
+  
    
 
     return (
@@ -45,13 +48,15 @@ const Navbar = () => {
 
                 <input 
                 className='searchbar' 
-                type="text" placeholder='Search..'
-                    onChange={handleOnChange}
+                type="text" 
+                value={theValue}
+                placeholder='Search..'
+                onChange={handleOnChange}
                 />
-                <div className={isVisible ? 'visible drop-down-list' : 'notVisible drop-down-list'}><SearchItems Favies={filteredFavies}/></div>
+                <div className={displayResults ? 'visible drop-down-list' : 'notVisible drop-down-list'}><SearchItems Favies={filteredFavies} /></div>
 
 
-                <FaSearch className='magnifier' onClick={clickMagnifyer} />
+                <FaSearch className='magnifier'/>
             </section>
                     
                     <div className='logo'>

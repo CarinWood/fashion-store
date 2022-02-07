@@ -1,8 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { FaShoppingCart, FaSearch, FaRegHeart } from 'react-icons/fa';
+import { FaShoppingCart, FaRegHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Favies } from '../data/ProductData';
-import SearchItems from '../search/SearchItems';
 import './navbar.css'
 import { CartContext } from '../../context/CartContext';
 
@@ -53,10 +52,26 @@ const Navbar = () => {
                 placeholder='Search..'
                 onChange={handleOnChange}
                 />
-                <div className={displayResults ? 'visible drop-down-list' : 'notVisible drop-down-list'}><SearchItems Favies={filteredFavies} /></div>
+                <div onClick={clear} className={displayResults ? 'visible drop-down-list' : 'notVisible drop-down-list'}>
+                    <ul> 
+                        {filteredFavies.map((fav) => (
+                          <div className='search-div'   onClick={clear}>
+      
+                          <a 
+                         
+                          className='search-title' 
+                          href={fav.anchor}>
+                              <h1>{fav.title}</h1>
+                         </a>
+                       
+                      </div>
+                        ))} 
+
+                    </ul>                    
+                    </div>
 
 
-                <FaSearch className='magnifier'/>
+        
             </section>
                     
                     <div className='logo'>

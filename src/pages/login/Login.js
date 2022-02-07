@@ -34,12 +34,12 @@ const Login = () => {
             <div className='login'>
             <div className='login-square'>
                 <h2 className='login-header'>SIGN IN</h2>
-                <input className='input-field' type="text" placeholder='Username' 
+                <input className='input-field' type="text" placeholder='Username' value={name}
                     onChange={((e) => (
                         setName(e.target.value)
                     ))}
                 ></input>
-                <input className='input-field' type="password" placeholder='Password'
+                <input className='input-field' type="password" placeholder='Password' value={password}
                 onChange={(e) =>(
                     setPassword(e.target.value)
                 )}></input>

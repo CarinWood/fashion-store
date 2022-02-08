@@ -20,10 +20,10 @@ const Cart = () => {
     const totalSum = cart.reduce((total, item) => total + item.quantity * item.price, 0);
 
 
-    const AmountOfProducts = 0;
+
 
     function checkOutMsg() {
-        alert("We hav successfully withdrawn $ " + totalSum + ' from you bankaccount')
+        alert("We have successfully withdrawn $ " + totalSum + ' from you bankaccount')
     }
 
     const removeProd = (product) => {
@@ -31,8 +31,14 @@ const Cart = () => {
     }
 
     function clickOnHeart(heartObj) {
-        setHeartList([...heartList, {...heartObj}])
-        removeProd(heartObj);
+        const productExist = heartList.find((item) => item.id === heartObj.id)
+        if(productExist) {
+            removeProd(heartObj);
+        } else {
+            setHeartList([...heartList, {...heartObj}])
+            removeProd(heartObj);
+        }
+     
     }
 
     function handleAddProduct(product) {

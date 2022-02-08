@@ -25,6 +25,7 @@ const WishList = () => {
           removeFromWishlist(product)
         } else {
           setCart([...cart, {...product, quantity: 1}])
+          removeFromWishlist(product)
         }
     }
 

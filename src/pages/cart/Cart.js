@@ -18,12 +18,13 @@ const Cart = () => {
    
     
     const totalSum = cart.reduce((total, item) => total + item.quantity * item.price, 0);
+    const lastSum = totalSum + 14;
 
 
 
 
     function checkOutMsg() {
-        alert("We have successfully withdrawn $ " + totalSum + ' from you bankaccount')
+        alert("We have successfully withdrawn $ " + totalSum + ' from you bankaccount. \nThank you for your purchase!')
     }
 
     const removeProd = (product) => {
@@ -126,7 +127,7 @@ const Cart = () => {
                                 <div className='black-line'></div>
                                 <h3 id="total">
                                     Total:
-                                    {totalSum >= 50 ? <span>$ {totalSum}</span> : <span>$ {totalSum + 14}</span>}
+                                    {totalSum >= 50 ? <span>$ {totalSum}</span> : <span>$ {cart.length === 0 ?0: lastSum}</span>}
                                 </h3>
                                 
                             <button onClick={checkOutMsg} type="submit" className='checkout-btn'>Checkout</button>

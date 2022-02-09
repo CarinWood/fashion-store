@@ -121,12 +121,12 @@ const Cart = () => {
 
                                 <p className='order-value'>
                                     Shipping cost:
-                                    <span>$ {cart.length === 0 ? 0 : 14}</span>
+                                   {totalSum >= 50 ? <span className='free-freight-text'>free freight</span> : <span>$ {cart.length === 0 ? 0 : 14}</span>}
                                 </p>
                                 <div className='black-line'></div>
                                 <h3 id="total">
                                     Total:
-                                    <span>${cart.length > 0 ? totalSum + 14 : 0}</span>
+                                    {totalSum >= 50 ? <span>$ {totalSum}</span> : <span>$ {totalSum + 14}</span>}
                                 </h3>
                                 
                             <button onClick={checkOutMsg} type="submit" className='checkout-btn'>Checkout</button>

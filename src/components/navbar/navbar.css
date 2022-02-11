@@ -10,6 +10,11 @@ body {
   scrollbar-width: none;  
 }
 
+.responsive-menu {
+  visibility: hidden;
+  height: 1px;
+}
+
 .App {
   max-width: 100%!important;
   overflow-x: hidden;
@@ -32,7 +37,6 @@ body {
   Z-index: 100;
   background-color: #fcf5f5;
   margin-bottom: 100px;
-  
 }
 
 .nav-content {
@@ -67,6 +71,7 @@ body {
   width: 50px;
   font-size: 18px;
   margin-left: 30px;
+  outline: none;
 }
 
 .searchbar {
@@ -78,11 +83,9 @@ body {
   margin-right: 5px;
 }
 
-.magnifier {
-  cursor: pointer;
-}
 
-.logo {
+
+.logo-name {
   color: black;
   font-size: 30px;
   font-weight: 500;
@@ -121,7 +124,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   height: 6vh;
-
 }
 
 .navbar-right {
@@ -155,7 +157,7 @@ Link {
 }
 
 .digit {
-  background-color: midnightblue;
+  background-color: teal;
   color: white;
   border: none;
   border-radius: 50%;
@@ -211,6 +213,11 @@ Link {
 
 }
 
+
+.responsive-menu {
+  visibility: hidden;
+}
+
 .search-title {
   text-decoration: none;
   color: white;
@@ -222,6 +229,204 @@ Link {
 
 .search-div:hover {
   opacity: 0.5;
+}
+
+.menu {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: teal;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+
+  .hamburger-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    padding-top: 20px;
+    background-color: transparent;
+    z-index: 3;
+  }
+
+  .menu {
+    visibility: visible;
+    width: 58px;
+    height: 58px;
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+
+
+
+  .bar1, .bar2, .bar3 {
+    height: 4px;
+    width: 32px;
+    border-radius: 5px;
+    background-color: white;
+    display: block;
+    margin-left: 12px;
+  }
+
+  .bar1 {
+    transform: translateY(15px);
+    transition: 0.5s ease;
+  }
+
+  .bar2 {
+    transform: translateY(22px);
+    transition: 0.5s ease;
+  }
+
+  .bar3 {
+      transform: translateY(29px);
+      transition: 0.5s ease;
+  }
+
+  .change-menu {
+    background-color: transparent;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+
+  .change1 {
+    background-color: white;
+    display: block;
+    margin-left: 12px;
+    height: 4px;
+    width: 32px;
+    border-radius: 5px;
+    transform: translateY(25px) rotateZ(45deg);
+    transition: 0.5s ease;
+  }
+
+  .change2 {
+    background-color: white;
+    display: block;
+    margin-left: 12px;
+    height: 4px;
+    width: 32px;
+    border-radius: 5px;
+    transform: translateY(22px);
+    opacity: 0;
+  }
+
+  .change3 {
+    background-color: white;
+    display: block;
+    margin-left: 12px;
+    height: 4px;
+    width: 32px;
+    border-radius: 5px;
+    transform: translateY(17px) rotateZ(-45deg);
+    transition: 0.5s ease;
+  }
+
+  .deal {
+   height: 1px;
+   visibility: hidden;
+    z-index: -2;
+  }
+
+  .hidden-menu {
+    opacity: 1;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color: teal;
+    position: absolute;
+    right: -100%;
+    top: -500%;
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu-bg {
+    width: 800px;
+    height: 800px; 
+    border-radius: 50%;
+    background-color: teal;
+    position: absolute;
+    top: -400%;
+    right: -50%;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    z-index:2; 
+  }
+
+  .responsive-menu {
+    visibility: visible;
+    list-style: none;
+    position: absolute;
+    top: 30%;
+    right: 14%;
+    z-index: 99;
+    color: #fcf5f5;
+    font-size: 22px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .responsive-menu li {
+    margin-bottom: 23px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    
+  }
+
+  .show-responsive {
+    opacity: 1;
+    transition: 0.5s ease;
+  }
+
+  .logo-name {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+  }
+
+  .language, .navbar-left, .navbar-right {
+    visibility: hidden;
+  }
+
+  #cart, .digit {
+    visibility: visible;
+
+  }
+
+  #cart {
+    position: absolute;
+    top: 20%;
+    right:70%;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .digit {
+    position: absolute;
+    top: -18%;
+    right: 43%;  
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
 }
 
 

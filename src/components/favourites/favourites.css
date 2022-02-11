@@ -112,8 +112,82 @@
 
 .click-heart {
     width: 45px;
-    padding-left: 10px;
-    padding-top: 5px;
+    position: absolute;
+    bottom: -10%;
+    right: 0;
 
 }
 
+.btn-div {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 12px;
+   
+}
+
+.secret-btn {
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .fav-container {
+        height: 250px;
+    }
+  
+
+    .fav-title  {
+        font-size: 20px;
+    }
+
+    .click-heart {
+        position: absolute;
+        top: 85%;
+        right: -5%;
+    }
+
+    .red-heart {
+        color: white;
+        font-size: 20px;
+    }
+
+    .heart {
+        font-size: 20px;
+    }
+
+    .fav-title {
+        font-size: 18px;
+    } 
+
+    .fav-price {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-div {
+        width: 100%;
+        margin-left: 0;
+        display: flex;  
+        justify-content:center;
+        align-items: flex-start;
+    }
+
+    .secret-btn {
+        visibility: visible;
+        background-color: teal;
+        color: white;
+        font-size: 13px;
+        letter-spacing: 3px;
+        font-weight: 500;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .secret-btn:active {
+        transform: translateY(3px)
+    }
+}

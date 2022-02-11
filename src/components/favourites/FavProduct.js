@@ -48,14 +48,17 @@ const FavProduct = ({favies}) => {
             </div>
            
             <div className='heart-container'>
-           
+            <div className='btn-div'>
             <h2 onClick={() => addProduct(favies)} className='fav-title'>{favies.title}</h2>
          
             <div className='click-heart' onClick={() => clickOnHeart(favies)}>
             {heartList.find((item) => item.id == favies.id) ? <FaHeart className='heart'/>: <FaRegHeart className='red-heart'/>} 
             </div>
-            </div>
+         
+            
             <p className='fav-price'>$ {favies.price}</p>
+            </div>
+            </div>
         </div>
     )
 }

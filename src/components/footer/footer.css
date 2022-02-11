@@ -47,3 +47,14 @@
 .logo-link {
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 992px) {
+    .footer-container {
+        padding-top: 10px;
+    }
+
+    .footer-text {
+        width: 65%;
+    }
+}

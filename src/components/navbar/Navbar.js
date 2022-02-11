@@ -13,6 +13,11 @@ const Navbar = () => {
     const [count, setCount] = useState(0)
     const [theValue, setTheValue] = useState('')
     const [isVisible, setIsVisible] = useState(false)
+    const [showMenu, setShowMenu] = useState(false)
+
+    const hamburgerClick = () => {
+        setShowMenu(!showMenu);
+    }
 
    const handleOnChange = (e) => {
        setTheValue(e.target.value) 
@@ -74,7 +79,7 @@ const Navbar = () => {
         
             </section>
                     
-                    <div className='logo'>
+                    <div className='logo-name'>
                         <Link id="link" to="/">
                         Clothes4You
                         </Link>
@@ -102,7 +107,26 @@ const Navbar = () => {
                     </Link>
                 </section>
             </div>
+
+                
+                <div className='hamburger-nav'>
+                    <div className={showMenu? "change-menu": 'menu'} onClick={hamburgerClick}>
+                        <div className={showMenu ? "change1": "bar1"}></div>
+                        <div className={showMenu ? "change2": "bar2"}></div>
+                        <div className={showMenu ? "change3": "bar3"}></div>
+                    </div>
+                </div>
+                <div className={showMenu ?  'menu-bg' : 'hidden-menu'}></div>
+                <ul className={showMenu ? "responsive-menu show-responsive" : "responsive-menu"}>
+                    <li className='list'>Register</li>
+                    <li className='list'>Sign In</li>
+                    <li className='list'>Favourites</li>
+                    <li>Cart</li>
+                </ul>
+
+
         </div>
+
     )
 }
 

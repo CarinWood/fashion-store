@@ -26,10 +26,7 @@
     padding: 8px;
     margin-right: 10px;
     width: 280px;
-
 }
-
-
 
 .send-btn {
     background: whitesmoke;
@@ -40,5 +37,24 @@
     margin-top: 30px;
     padding: 8px;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 992px) {
+    .news {
+        height: 50vh;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .news-heading {
+        font-size: 60px;
+    }
+
+    .news-text {
+        font-size: 22px;
+    
+    }
+    
 }
 

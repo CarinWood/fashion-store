@@ -39,3 +39,16 @@
     cursor: pointer;
     margin-left: 20px;
 }
+
+
+@media screen and (max-width: 992px) {
+    .categories {
+        background-color: #fcf5f5;
+    }
+
+    .cat-title {
+        font-size: 30px;
+    }
+
+   
+}

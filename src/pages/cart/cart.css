@@ -96,7 +96,7 @@
 aside {
     width: 30%;
     height: 75vh;
-    margin-right: 150px;
+    margin-right: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,6 +197,7 @@ aside {
     position: relative;
     background-color: #fff;
     border-radius: 3px;
+    margin-left: 60px;
 }
 
 .image-div {

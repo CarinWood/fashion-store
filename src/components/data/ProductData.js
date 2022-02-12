@@ -4,6 +4,8 @@ import toteBag from '../../assets/toteBag.jpg';
 import blackBag from '../../assets/blackBag.jpg'
 import dottedShirt from '../../assets/shirt.jpg';
 import yellowDress from '../../assets/yellowDress.jpg';
+import oversize from '../../assets/pexels-lucas-queiroz-1852382.jpg'
+import tshirt from '../../assets/pexels-monstera-6311652.jpg'
 
 
 export const Favies = [
@@ -60,4 +62,22 @@ export const Favies = [
         id:"sunhat",
         quantity: 1,
     },
+    {
+        title: 'Oversize Shirt',
+        img: oversize,
+        price: '43',
+        anchor:'#oversize',
+        id:"oversize",
+        quantity: 1,
+
+    },
+    {
+        title: 'T-shirt',
+        img: tshirt,
+        price: '33',
+        anchor:'#tshirt',
+        id:"tshirt",
+        quantity: 1,
+
+    }
 ];

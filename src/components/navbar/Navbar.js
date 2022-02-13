@@ -80,7 +80,7 @@ const Navbar = () => {
             </section>
                     
                     <div className='logo-name'>
-                        <Link id="link" to="/">
+                        <Link to="/" className='logo-link'>
                         Clothes4You
                         </Link>
                     </div>
@@ -118,10 +118,10 @@ const Navbar = () => {
                 </div>
                 <div className={showMenu ?  'menu-bg' : 'hidden-menu'}></div>
                 <ul className={showMenu ? "responsive-menu show-responsive" : "responsive-menu"}>
-                    <li className='list'>Register</li>
-                    <li className='list'>Sign In</li>
-                    <li className='list'>Favourites</li>
-                    <li>Cart</li>
+                    <Link to="/register"><li className='list'>Register</li></Link>
+                    <Link to="/login"><li className='list'>Sign In</li></Link>
+                    <Link to="/cart"><li className='list'>Cart</li></Link>
+                    <Link to="/wishlist"><li className='list'>Favourites</li></Link>
                 </ul>
 
 

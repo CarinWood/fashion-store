@@ -246,17 +246,24 @@ Link {
 }
 
 @media screen and (max-width: 992px) {
+  .nav-content {
+    border: 5px solid green;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+
+  
+   
+  }
 
   .hamburger-nav {
     position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 30px;
-    padding-top: 20px;
     background-color: transparent;
+    top: 30%;
+    right: 2%;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
     z-index: 3;
   }
 
@@ -264,10 +271,12 @@ Link {
     visibility: visible;
     width: 58px;
     height: 58px;
-    padding: 3px;
+    top: 15%;
+    right: 2%;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     transition: 0.3s ease-in-out;
+    z-index: 8;
   }
 
 
@@ -279,6 +288,7 @@ Link {
     background-color: white;
     display: block;
     margin-left: 12px;
+    z-index: 9;
   }
 
   .bar1 {
@@ -302,9 +312,12 @@ Link {
     height: 58px;
     border-radius: 50%;
     padding: 3px;
+    position: absolute;
+    top: 15%;
+    right: 2%;
     cursor: pointer;
-    position: relative;
     transition: 0.3s ease-in-out;
+  
   }
 
   .change1 {
@@ -353,9 +366,11 @@ Link {
     border-radius: 50%;
     background-color: teal;
     position: absolute;
-    right: -100%;
+    right: -114%;
     top: -500%;
     transition: 0.5s ease-in-out;
+   
+
   }
 
   .menu-bg {
@@ -376,39 +391,45 @@ Link {
     list-style: none;
     position: absolute;
     top: 30%;
-    right: 14%;
+    right: -100%;
     z-index: 99;
     color: #fcf5f5;
     font-size: 22px;
     text-align: center;
     opacity: 0;
-    transition: 0.5s ease;
+    text-decoration: none;
+    transition: 0.3s ease;
   }
 
   .responsive-menu li {
     margin-bottom: 23px;
     cursor: pointer;
     letter-spacing: 2px;
-    
+    text-decoration: none;   
   }
 
   .show-responsive {
     opacity: 1;
-    transition: 0.5s ease;
+    right: 14%;
   }
 
   .logo-name {
     position: absolute;
     top: 35%;
     left: 10%;
+    z-index: 4;
   }
 
-  .language, .navbar-left, .navbar-right {
-    visibility: hidden;
+  .language {
+    position: absolute;
+    top: -100%;
+   
   }
 
   #cart, .digit {
     visibility: visible;
+    top: 0;
+    z-index: 2;
 
   }
 
@@ -434,6 +455,19 @@ Link {
     text-decoration: none;
     color: white;
   }
+
+  .searchbar, .register, .wishlist, .signin {
+    position: absolute;
+    top: -200%;
+  }
+  
+  .theLink {
+    text-decoration: none!important;
+  }
+
+
+
+ 
 
 }
 

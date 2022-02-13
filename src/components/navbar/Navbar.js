@@ -91,7 +91,7 @@ const Navbar = () => {
                         <FaRegHeart className='wishlist'/>
                     </Link>
 
-                    <Link id="register-link" to="/register">
+                    <Link to="/register">
                         <p className='register'>Register</p>
                     </Link>
 
@@ -100,10 +100,11 @@ const Navbar = () => {
                     </Link>
 
                     
-
+                            <Link to="/cart">
                     <Link to="/cart">
                     <FaShoppingCart id="cart"/>
                     <p className='digit'>{cart.reduce((total, product) => total + product.quantity,0)}</p>
+                    </Link>
                     </Link>
                 </section>
             </div>
@@ -118,10 +119,10 @@ const Navbar = () => {
                 </div>
                 <div className={showMenu ?  'menu-bg' : 'hidden-menu'}></div>
                 <ul className={showMenu ? "responsive-menu show-responsive" : "responsive-menu"}>
-                    <Link to="/register"><li className='list'>Register</li></Link>
-                    <Link to="/login"><li className='list'>Sign In</li></Link>
-                    <Link to="/cart"><li className='list'>Cart</li></Link>
-                    <Link to="/wishlist"><li className='list'>Favourites</li></Link>
+                    <Link to="/register" className='theLink'><li className='list'>Register</li></Link>
+                    <Link to="/login" className='theLink'><li className='list'>Sign In</li></Link>
+                    <Link to="/cart" className='theLink'><li className='list'>Cart</li></Link>
+                    <Link to="/wishlist" className='theLink'><li className='list'>Favourites</li></Link>
                 </ul>
 
 

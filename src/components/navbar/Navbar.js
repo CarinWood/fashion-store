@@ -91,7 +91,7 @@ const Navbar = () => {
                         <FaRegHeart className='wishlist'/>
                     </Link>
 
-                    <Link to="/register">
+                    <Link id="register-link" to="/register">
                         <p className='register'>Register</p>
                     </Link>
 

@@ -149,7 +149,7 @@ body {
   border-bottom: 1px solid black; 
 }
 
-Link {
+.theLink {
   text-decoration: none;
 }
 
@@ -245,22 +245,27 @@ Link {
   visibility: hidden;
 }
 
+.register, #register {
+  text-decoration: none!important;
+  color: black;
+}
+
+#register:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 992px) {
   .nav-content {
-    border: 5px solid green;
-    background-color: transparent;
+    background-color: #fcf5f5;
     position: absolute;
     top: 0;
-
-  
-   
   }
 
   .hamburger-nav {
     position: absolute;
     background-color: transparent;
     top: 30%;
-    right: 2%;
+    right: 3%;
     width: 58px;
     height: 58px;
     border-radius: 50%;
@@ -271,8 +276,8 @@ Link {
     visibility: visible;
     width: 58px;
     height: 58px;
-    top: 15%;
-    right: 2%;
+    top: 30%;
+    right: 3%;
     cursor: pointer;
     position: absolute;
     transition: 0.3s ease-in-out;
@@ -313,8 +318,8 @@ Link {
     border-radius: 50%;
     padding: 3px;
     position: absolute;
-    top: 15%;
-    right: 2%;
+    top: 30%;
+    right: 3%;
     cursor: pointer;
     transition: 0.3s ease-in-out;
   
@@ -366,11 +371,9 @@ Link {
     border-radius: 50%;
     background-color: teal;
     position: absolute;
-    right: -114%;
-    top: -500%;
+    right: -100%;
+    top: -5000%;
     transition: 0.5s ease-in-out;
-   
-
   }
 
   .menu-bg {
@@ -379,7 +382,7 @@ Link {
     border-radius: 50%;
     background-color: teal;
     position: absolute;
-    top: -400%;
+    top: -3300%;
     right: -50%;
     opacity: 1;
     transition: 0.5s ease-in-out;
@@ -390,7 +393,7 @@ Link {
     visibility: visible;
     list-style: none;
     position: absolute;
-    top: 30%;
+    top: 202%;
     right: -100%;
     z-index: 99;
     color: #fcf5f5;
@@ -415,36 +418,35 @@ Link {
 
   .logo-name {
     position: absolute;
-    top: 35%;
+    font-size: 42px;
+    top: 26%;
     left: 10%;
     z-index: 4;
   }
 
   .language {
     position: absolute;
-    top: -100%;
-   
+    top: -100%; 
   }
 
   #cart, .digit {
     visibility: visible;
     top: 0;
     z-index: 2;
-
   }
 
   #cart {
     position: absolute;
-    top: 20%;
-    right:70%;
-    font-size: 35px;
+    top: 32%;
+    right:75%;
+    font-size: 40px;
     cursor: pointer;
   }
 
   .digit {
     position: absolute;
-    top: -18%;
-    right: 43%;  
+    top: -10%;
+    right: 49%;  
     width: 25px;
     height: 25px;
     font-size: 18px;
@@ -456,6 +458,8 @@ Link {
     color: white;
   }
 
+ 
+
   .searchbar, .register, .wishlist, .signin {
     position: absolute;
     top: -200%;
@@ -464,10 +468,6 @@ Link {
   .theLink {
     text-decoration: none!important;
   }
-
-
-
- 
 
 }
 

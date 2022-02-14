@@ -63,7 +63,7 @@ export const Favies = [
         quantity: 1,
     },
     {
-        title: 'Oversize Shirt',
+        title: 'Shirt',
         img: oversize,
         price: '43',
         anchor:'#oversize',

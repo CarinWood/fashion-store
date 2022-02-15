@@ -181,11 +181,15 @@
         visibility: visible;
         background-color: teal;
         color: white;
-        font-size: 13px;
-        letter-spacing: 3px;
+        font-size: 18px;
+        letter-spacing: 1.5px;
         font-weight: 500;
+        margin-top: 12px;
         padding: 8px;
         cursor: pointer;
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     .secret-btn:active {

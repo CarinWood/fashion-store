@@ -58,6 +58,7 @@ const FavProduct = ({favies}) => {
          
             
             <p className='fav-price'>$ {favies.price}</p>
+            <button type="button" className='secret-btn'>Add to Cart</button>
             </div>
             </div>
         </div>

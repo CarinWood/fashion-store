@@ -109,3 +109,32 @@
 .cart-button-icon {
     margin-right: 10px;
 }
+
+@media screen and (max-width: 992px) {
+    .wishWrap {
+        margin-top: 40px;
+        padding-left: 80px;
+        padding-right: 10px;
+     
+ 
+    
+    }
+
+    .wish-img-div {
+        width: 240px;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    .trashcan-icon-div {
+        bottom: 35%;
+        right: 6%;
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+    }
+    
+    
+
+
+}

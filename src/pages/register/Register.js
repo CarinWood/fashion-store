@@ -25,7 +25,7 @@ const Register = () => {
                     accordance with the <b>PRIVACY POLICY</b>
                 </p>
 
-                <button className='create-btn'>Create</button>
+                <button className='create-btn' type="button">Create</button>
                 </form>
               
             </div>

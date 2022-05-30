@@ -9,9 +9,9 @@ const CategoryItem = ({item}) => {
             <p>
                 <h2 className='cat-title'>{item.title}</h2>
             </p>
-            <Link to={item.link}>
+          
             <button className='cat-btn'>SHOP NOW</button>
-            </Link>
+      
         </div>
     )
 }

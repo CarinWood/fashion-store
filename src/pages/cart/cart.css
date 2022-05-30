@@ -54,8 +54,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 100px;
-   
+    padding-left: 100px;   
 }
 
 .top-div {
@@ -116,8 +115,7 @@ aside {
 .free-freight-text {
     font-size: 20px;
     font-weight: 300;
-    letter-spacing: 1.5px;
-    
+    letter-spacing: 1.5px; 
 }
 
 .checkout-btn {
@@ -129,8 +127,7 @@ aside {
     padding: 8px;
     cursor: pointer;
     width: 70%;
-    margin-top: 30px;
-    
+    margin-top: 30px;   
 }
 
 .checkout-btn:hover {
@@ -158,6 +155,7 @@ aside {
     justify-content: center;
     align-items: center;
 }
+
 .card {
     margin-top: 0px;
     width: 40px;
@@ -203,8 +201,7 @@ aside {
 .image-div {
     width: 120px;
     height: 150px;
-    margin-bottom: 0px;
-   
+    margin-bottom: 0px;   
 }
 
 .image-div img {
@@ -217,8 +214,7 @@ aside {
 .cartTitle {
     margin-left: 50px;
     margin-top: 0px;
-    font-size: 20px;
-  
+    font-size: 20px;  
 }
 
 .cartPrice {
@@ -312,17 +308,13 @@ aside {
     letter-spacing: 1px;
     font-weight: 500;
     padding: 10px 10px;
-
 }
-
-
 
 .heart-div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 50px;
-  
+    margin-left: 50px; 
 }
 
 .saveheart {
@@ -339,14 +331,121 @@ aside {
  
 }
 
+
 @media screen and (max-width: 992px) {
     aside {
-        width: 50%;
+        width: 48%;
         height: 55vh;
-        margin-right: 10px;
-        padding-left: 10px;
+        margin-right: 40px;
+        padding-left: 0px;
         background-color: white;
+        margin-left: 0px;
     }
 
+    .cart-heading {
+        font-size: 20px;
+    }
+
+    .cart-heading2 {
+        font-size: 22px;
+        margin-top: 0px;
+    }
+
+
+    .order {
+        padding-left: 0px;   
+    }
+
+    .order-value {
+        font-size: 18px;
+        letter-spacing: 2px;
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+
+    .free-freight-text {
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1.5px; 
+    }
+
+    #total {
+        letter-spacing: 2px;
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+
+    .black-line {
+        margin-left: 20px;
+    }
+
+    .checkout-btn {
+        font-size: 17px;
+        padding: 8px;
+        cursor: pointer;
+        width: 30%;
+        margin-top: 30px; 
+        margin-left: 20px;  
+    }
+
+    .displayed-product {
+        padding: 20px;
+        width: 280px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: black;
+        margin-bottom: 10px;
+        position: relative;
+        background-color: #fff;
+        border-radius: 3px;
+        margin-left: 0px;
+        padding-bottom: 0px;
+
+    }
+
+    .image-div {
+        width: 80px;
+        height: 100px;  
+    }
+
+    .cartTitle {
+        margin-left: 20px;
+        margin-top: 0px;
+        font-size: 18px;  
+    }
+
+    .quantity-select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+    .cartPrice {
+        margin-left: 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .heart-div {
+        margin-left: 20px; 
+        margin-top: -10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    #trashy {     
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        padding: 10px 10px;
+    }
+    
     
 }

@@ -1,14 +1,20 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import Footer from '../../components/footer/Footer'
 import './members.css'
 import Navbar from '../../components/navbar/Navbar'
 
+
 const Members = () => {
+    const [savedUser, setSavedUser] = useState('')
+
+    useEffect(() => {
+        setSavedUser(localStorage.getItem("_username"))
+    }, [])
     return (
         <div>
             <Navbar/>
             <div className='member-container'>
-                <h1 className='welcome'>Welcome User!</h1>
+                <h1 className='welcome'>Welcome {savedUser}!</h1>
                 <div className='member-card'>
                     <h1 className="logo">Clothes4You <span className='club'>club</span></h1>
                     <h3 className='membership'>Membership level: <span className='gold'>GOLD</span></h3>

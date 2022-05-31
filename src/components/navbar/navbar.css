@@ -68,24 +68,20 @@ body {
   word-spacing: 3px;
 }
 
-.language {
-  background-color: whitesmoke;
-  border: 0.5px solid black;
-  width: 50px;
-  font-size: 18px;
-  margin-left: 30px;
-  outline: none;
-  visibility: hidden;
+._icons {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 80px;
 }
 
-.searchbar {
-  border: 0.5px solid black;
-  width: 180px;
-  height: 20px;
-  margin-left: 50px;
-  font-size: 18px;
-  margin-right: 5px;
+._icon {
+  font-size: 23px;
+  opacity: 0.5;
+  cursor: pointer;
 }
+
 
 
 
@@ -120,6 +116,16 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
+}
+
+.signout {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.signout:hover {
+  text-decoration: underline;
 }
 
 .navbar-left {
@@ -256,6 +262,11 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+
+  ._icons {
+    visibility: hidden;
+  }
+
   .nav-content {
     background-color: #fcf5f5;
     position: absolute;
@@ -458,8 +469,6 @@ body {
     text-decoration: none;
     color: white;
   }
-
- 
 
   .searchbar, .register, .wishlist, .signin {
     position: absolute;

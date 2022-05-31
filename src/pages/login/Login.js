@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../../components/navbar/Navbar';
 import './login.css';
 import Footer from '../../components/footer/Footer';
@@ -6,26 +6,38 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 const Login = () => {
+    const [typedName, setTypedName] = useState('')
+    const [typedPassword, setTypedPassword] = useState('')
+    const [savedUsername, setSavedUsername] = useState('')
+    const [savedPassword, setSavedPassword] = useState('')
+    
 
-    const [name, setName] = useState('')
-    const [password, setPassword] = useState('')
-
-    const userData = {
-        userName: 'User',
-        password: 'password',
-    }
+    useEffect(() => {
+        setSavedUsername(localStorage.getItem("_username"))
+        setSavedPassword(localStorage.getItem("_password"))
+    }, [])
+ 
 
     const navigate = useNavigate()
 
     function checkUser() {
-        if (userData.userName === name && userData.password === password) {
-            navigate('/members');
+        if (typedName && typedPassword) {
+            if (typedName === savedUsername && typedPassword === savedPassword) {
+                navigate('/members');
+            } else {
+                alert('Wrong username or password!')
+            }
+
         } else {
-            alert('You entered the wrong username and/or password')
+            alert('You need to fill in both fields!')
            
         }
     }
+
+
+
 
 
     return (
@@ -36,18 +48,18 @@ const Login = () => {
                 <h2 className='login-header'>SIGN IN</h2>
 
                 <div className='input-group'>
-                        <input className='input-field' id="username" type="text" placeholder=' ' value={name}
+                        <input className='input-field' id="username" type="text" placeholder='username'
                             onChange={((e) => (
-                                setName(e.target.value)
+                                setTypedName(e.target.value)
                             ))}
                         ></input>
                         <label for="username" className="input-label">Username</label>
                 </div>
 
                 <div className='input-group'>
-                        <input className='input-field' type="password" placeholder='' id="username" value={password}
+                        <input className='input-field' type="password" placeholder='password' id="username"
                         onChange={(e) =>(
-                            setPassword(e.target.value)
+                            setTypedPassword(e.target.value)
                         )}></input>
                         <label for="password" className="input-label">Password</label>
                 </div>

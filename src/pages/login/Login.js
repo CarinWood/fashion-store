@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Navbar from '../../components/navbar/Navbar';
 import './login.css';
 import Footer from '../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext';
 
 
 
@@ -12,10 +13,11 @@ const Login = () => {
     const [typedPassword, setTypedPassword] = useState('')
     const [savedUsername, setSavedUsername] = useState('')
     const [savedPassword, setSavedPassword] = useState('')
+    const [user, setUser] = useContext(UserContext)
     
 
     useEffect(() => {
-        setSavedUsername(localStorage.getItem("_username"))
+        setUser(localStorage.getItem("_username"))
         setSavedPassword(localStorage.getItem("_password"))
     }, [])
  
@@ -24,7 +26,7 @@ const Login = () => {
 
     function checkUser() {
         if (typedName && typedPassword) {
-            if (typedName === savedUsername && typedPassword === savedPassword) {
+            if (typedName === user && typedPassword === savedPassword) {
                 navigate('/members');
             } else {
                 alert('Wrong username or password!')

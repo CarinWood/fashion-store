@@ -10,12 +10,14 @@ import WishList from './pages/wishlist/WishList';
 import Members from './pages/members/Members';
 import { CartProvider } from './context/CartContext';
 import WishListProvider from './context/WishListContext';
+import { UserProvider } from './context/UserContext';
 
 
 
 function App() {
   return (
     <>
+    <UserProvider>
     <CartProvider>
       <WishListProvider>
         <Routes>
@@ -34,6 +36,7 @@ function App() {
         </Routes>
         </WishListProvider>
     </CartProvider>
+    </UserProvider>
     
     </>
   );

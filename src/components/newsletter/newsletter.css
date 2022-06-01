@@ -26,6 +26,7 @@
     padding: 8px;
     margin-right: 10px;
     width: 280px;
+    outline:none;
 }
 
 .send-btn {
@@ -56,5 +57,32 @@
     
     }
     
+}
+
+@media screen and (max-width: 445px) {
+    .news-heading {
+        font-size:40px;
+    }
+
+    .news-text {
+        font-size: 20px;
+        width: 80%;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .news-input {
+        font-size: 18px;
+        padding: 7px;
+        margin-right: 10px;
+        width: 240px;
+     
+    }
+
+    .send-btn {
+        font-size: 18px;
+        padding: 7px;
+    
+    }
 }
 

@@ -28,6 +28,12 @@
     align-items: center;
 }
 
+.secret-checkout {
+    height: 1px;
+    font-size: 1px;
+    visibility: hidden;
+}
+
 .my-cart {
     margin-right: 20px;
     opacity: 0.5;
@@ -451,9 +457,6 @@ aside {
 }
 
 @media screen and (max-width: 446px) {
-    aside {
-        visibility: hidden;
-    }
 
     .cart-heading {
         font-size: 21px;
@@ -484,5 +487,44 @@ aside {
     .image-div {
         width: 80px;
         height: 90px;  
+    }
+
+    .secret-checkout {
+        background: whitesmoke;
+        color: black;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin-top: 30px;
+        padding: 7px;
+        cursor: pointer;
+        visibility: visible;
+        height: auto;
+    }
+
+    .secret-checkout:active {
+        transform: translateY(2px);
+    }
+
+    aside {
+        width: 350px;
+        height: auto;
+        position: absolute;
+        left: 51%;
+        top: 95%;
+        margin-left: -280px;
+        animation: falldown 0.6s ease-in-out;
+    }
+
+    @keyframes falldown {
+        0% {
+            top: -200%;
+            opacity: 0;
+        }
+
+        100% {
+            top: 95%;
+            opacity: 1;
+        }
     }
 }

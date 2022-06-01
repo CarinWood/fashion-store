@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { FaShoppingCart, FaRegHeart } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { Favies } from '../data/ProductData';
 import './navbar.css'
 import { CartContext } from '../../context/CartContext';
-import { FaFacebookF, FaTwitter, FaInstagram, FaPinterestP, FaYoutube } from 'react-icons/fa';
+import { FaShoppingCart, FaRegHeart, FaFacebookF, FaTwitter, FaInstagram, FaPinterestP, FaYoutube } from 'react-icons/fa';
+import { UserContext } from '../../context/UserContext';
 
 
 
@@ -14,13 +14,14 @@ const Navbar = () => {
     const [theValue, setTheValue] = useState('')
     const [isVisible, setIsVisible] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
-    const [savedUsername, setSavedUsername] = useState('')
+    const [user, setUser] = useContext(UserContext)
     const navigate = useNavigate()
 
 
-    useState(() => {
-        setSavedUsername(localStorage.getItem("_username"))
-    }, [])
+
+    useEffect(() => {
+        console.log(user)
+    }, [user])
 
     const hamburgerClick = () => {
         setShowMenu(!showMenu);
@@ -34,6 +35,7 @@ const Navbar = () => {
    function clear() {
        setTheValue('')
    }
+
 
    const displayResults = theValue.length > 0
 
@@ -79,12 +81,13 @@ const Navbar = () => {
                     <Link to="/wishlist">
                         <FaRegHeart className='wishlist'/>
                     </Link>
-
+    
                     <Link id="register-link" to="/register">
                         <p className='register'>Register</p>
                     </Link>
-
-                 <Link id="login" to="/login">
+                
+               
+                    <Link id="login" to="/login">
                         <p className='signin'>Sign In</p>
                     </Link>
 

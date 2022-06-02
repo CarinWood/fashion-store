@@ -111,8 +111,7 @@ const Navbar = () => {
                 </div>
                 <div className={showMenu ?  'menu-bg' : 'hidden-menu'}></div>
                 <ul className={showMenu ? "responsive-menu show-responsive" : "responsive-menu"}>
-                    <Link to="/register" className='theLink'><li className='list'>Register</li></Link>
-                    <Link to="/login" className='theLink'><li className='list'>Sign In</li></Link>
+                    <Link to="/" className='theLink'><li className='list'>Home</li></Link>
                     <Link to="/cart" className='theLink'><li className='list'>Cart</li></Link>
                     <Link to="/wishlist" className='theLink'><li className='list'>Favourites</li></Link>
                 </ul>

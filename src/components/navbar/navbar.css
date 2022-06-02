@@ -456,7 +456,7 @@ body {
 
 }
 
-@media (max-width: 446px) {
+@media (max-width: 500px) {
   .hidden-menu {
     opacity: 1;
     width: 800px;
@@ -467,6 +467,10 @@ body {
     right: -300%;
     top: -5000%;
     transition: 0.5s ease-in-out;
+  }
+
+  .theLink {
+    font-size: 20px;
   }
 
   .menu-bg {
@@ -528,11 +532,7 @@ body {
     top: 10%;
     right: 10%;
   }
-
-
-  
-
-  
+ 
 
 }
 

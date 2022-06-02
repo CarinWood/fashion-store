@@ -15,6 +15,7 @@ const Cart = () => {
 
     const [cart, setCart] = useContext(CartContext);
     const [heartList, setHeartList] = useContext(WishListContext);
+    const [foldCheckout, setFoldCheckout] = useState(false)
 
    
     
@@ -63,6 +64,10 @@ const Cart = () => {
         }
       }
 
+      const foldCheckoutFunc = () => {
+        setFoldCheckout(!foldCheckout)
+      }
+
     
 
 
@@ -85,7 +90,7 @@ const Cart = () => {
                         <div className="main">
                         {cart.length === 0 ?<h1 className='cart-heading'>
                         <FaShoppingCart className='my-cart'/> 
-                        Your cart is empty </h1> : <></> }
+                        Your cart is empty </h1> : <button className='secret-checkout-btn' onClick={() => foldCheckoutFunc()}>checkout</button> }
                          {cart.map((cartItem) => (
                              <div className='displayed-product' key={cartItem.id}>
                                  <div className='image-div'>
@@ -113,7 +118,7 @@ const Cart = () => {
                           
                         </div>
 
-                       <aside>
+                       <aside className={foldCheckout ? 'fall' : ''}>
                             <h1 className='cart-heading2'>Order Summary</h1>
 
                             <div className='order'>

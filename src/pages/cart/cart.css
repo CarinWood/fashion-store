@@ -9,6 +9,10 @@
     position: relative;
 }
 
+.secret-checkout-btn {
+    visibility: hidden;
+}
+
 .cart-heading {
     font-size: 35px;
     font-weight: 200;
@@ -461,35 +465,62 @@ aside {
 @media screen and (max-width: 500px) {
 
     .cart-cotainer {
-    
         position: relative;
+        height: auto;   
+    }
+
+    .link-wrapper {
+        margin-top: 80px;
     }
 
 
     .cart-heading {
-        height: 0.5px;
-        width: 0.5px;
-        visibility: hidden;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+      margin-top: -70px;
+    }
+
+    .main {
+        width: 100%;
+        position: absolute;
+        min-height: 200px;
     }
 
     .cart-heading2 {
-        font-size: 27px;
-        margin-bottom: 30px;
-        margin-top: 15px;
+        font-size: 30px;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+    .my-cart {
+        margin-right: 0px;
+        opacity: 0.5;
+        font-size: 25px;
+        margin-bottom: 35px;
+        margin-top: 30px;
     }
 
     .displayed-product {
         padding: 20px;
-        width: 340px;
+        width: 270px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         color: black;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         position: relative;
         background-color: #fff;
-        border-radius: 3px;
-        margin-left: 143px;
+        margin-left: 0px;
+        border-radius: 5px;
+        box-shadow: 0.8px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .prod-price {
+        visibility: hidden;
     }
 
     .heart-div {
@@ -502,24 +533,81 @@ aside {
         height: 90px;  
     }
 
+    #trashy {     
+        font-size: 16x;
+        letter-spacing: 1px;
+        font-weight: 500;
+        padding: 10px 13px;
+    }
+
     .bottom-div {
         max-width: 90%;
         margin-bottom: 50px;
+        position: relative;
     }
 
-    .main {
-        width: 0%;
-    }
+   
 
     aside {
         padding-top: 20px;
-        width: 100%;
+        width: 98%;
         margin: 0px;
         height: auto;
         padding-left: 20px;
         padding-bottom: 15px;
-   
-       
+        visibility: hidden;
+        z-index:1; 
+        position: absolute;
+        left: -2%;
+        margin-top: 80px;
+        opacity: 0;
+        height: 0px;
+    }
+
+    .fall {
+        left: -2%;
+        margin-top: 80px;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        animation: fall 0.5s ease-in-out;
+    }
+
+    @keyframes fall {
+        0% {
+            opacity: 0;
+            left: -150%;
+         
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+            left: -2%;
+
+        }
+    }
+
+    .secret-checkout-btn {
+        visibility: visible;
+        margin-bottom: 50px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        border-radius: 2.5px;
+        border: 0.9px solid gray;
+        padding: 7px;
+        background: transparent;
+        color: var(--primary-color);
+        cursor: pointer;
+        box-shadow: 0.8px 2px rgba(0, 0, 0, 0.5);
+        font-weight: 400;
+    }
+
+    .secret-checkout-btn:active {
+        transform: translateY(2px);
     }
 
 

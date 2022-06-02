@@ -113,7 +113,7 @@ const Navbar = () => {
                 <ul className={showMenu ? "responsive-menu show-responsive" : "responsive-menu"}>
                     <Link to="/" className='theLink'><li className='list'>Home</li></Link>
                     <Link to="/cart" className='theLink'><li className='list'>Cart</li></Link>
-                    <Link to="/wishlist" className='theLink'><li className='list'>Favourites</li></Link>
+                    <Link to="/wishlist" className='theLink'><li className='list'>Wish-list</li></Link>
                 </ul>
 
 

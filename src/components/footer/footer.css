@@ -2,7 +2,7 @@
     margin-top: 50px;
     background-color: #fcf5f5;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,6 +50,7 @@
 
 #copyright {
     background-color: #fcf5f5;
+    padding-bottom: 20px;
 }
 
 

@@ -100,6 +100,8 @@
     justify-content: center;
     padding: 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 2.5px;
 }
 
 .add-wish-btn:active {
@@ -136,6 +138,16 @@
 }
 
 @media screen and (max-width: 500px) {
+    .explanation {
+        width: 80%;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 20px;    
+    }
+
+
     .wish-img-div {
         width: 180px;
         height: 220px;
@@ -156,5 +168,15 @@
         justify-content: center;
         padding: 10px;
         cursor: pointer;
+    }
+
+    .wishWrap { 
+        margin-top: 40px;
+        padding-left: 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }

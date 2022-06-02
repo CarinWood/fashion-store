@@ -63,10 +63,9 @@
     }
 
     .cat-btn {
-        font-size: 13px;
+        font-size: 12px;
         border-radius: 2.5px;
         border: 0.9px solid gray;
-      
         padding: 7px;
         background: transparent;
         color: var(--primary-color);
@@ -74,6 +73,7 @@
         transition: 0.5s ease-in-out;
         box-shadow: 0.8px 2px rgba(0, 0, 0, 0.5);
         font-weight: 400;
+        margin-top: 5px;
     }
 
     .categories-container {

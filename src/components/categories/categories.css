@@ -54,7 +54,7 @@
 @media screen and (max-width: 500px) {
    
     .cat-title {
-        font-size: 18px;
+        font-size: 13px;
         margin-left: 0px;
     }
 
@@ -62,9 +62,9 @@
         background: whitesmoke;
         color: black;
         font-size: 12px;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         font-weight: 500;
-        padding: 6px;
+        padding: 5px;
         margin-left: 0px;
     }
 

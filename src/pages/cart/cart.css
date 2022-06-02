@@ -18,6 +18,7 @@
     align-items: center;
     position: absolute;
     top: 50%; 
+
 }
 .cart-heading2 {
     font-size: 35px;
@@ -109,6 +110,7 @@ aside {
     border: 1px solid black;
     padding-left: 10px;
     background-color: white;
+    visibility: visible;
 }
 
 .black-line {
@@ -456,13 +458,24 @@ aside {
     
 }
 
-@media screen and (max-width: 446px) {
+@media screen and (max-width: 500px) {
+
+    .cart-cotainer {
+    
+        position: relative;
+    }
+
 
     .cart-heading {
-        font-size: 21px;
-        left: 34%;
-        width: 300px;
-        margin-left: -150px;
+        height: 0.5px;
+        width: 0.5px;
+        visibility: hidden;
+    }
+
+    .cart-heading2 {
+        font-size: 27px;
+        margin-bottom: 30px;
+        margin-top: 15px;
     }
 
     .displayed-product {
@@ -489,42 +502,26 @@ aside {
         height: 90px;  
     }
 
-    .secret-checkout {
-        background: whitesmoke;
-        color: black;
-        font-size: 16px;
-        letter-spacing: 2px;
-        font-weight: 500;
-        margin-top: 30px;
-        padding: 7px;
-        cursor: pointer;
-        visibility: visible;
-        height: auto;
+    .bottom-div {
+        max-width: 90%;
+        margin-bottom: 50px;
     }
 
-    .secret-checkout:active {
-        transform: translateY(2px);
+    .main {
+        width: 0%;
     }
 
     aside {
-        width: 350px;
+        padding-top: 20px;
+        width: 100%;
+        margin: 0px;
         height: auto;
-        position: absolute;
-        left: 51%;
-        top: 95%;
-        margin-left: -280px;
-        animation: falldown 0.6s ease-in-out;
+        padding-left: 20px;
+        padding-bottom: 15px;
+   
+       
     }
 
-    @keyframes falldown {
-        0% {
-            top: -200%;
-            opacity: 0;
-        }
 
-        100% {
-            top: 95%;
-            opacity: 1;
-        }
-    }
+  
 }

@@ -15,7 +15,7 @@ const Cart = () => {
 
     const [cart, setCart] = useContext(CartContext);
     const [heartList, setHeartList] = useContext(WishListContext);
-    const [checkout, setCheckout] = useState(false)
+
    
     
     const totalSum = cart.reduce((total, item) => total + item.quantity * item.price, 0);
@@ -63,10 +63,7 @@ const Cart = () => {
         }
       }
 
-      const toggleCheckout = () => {
-          setCheckout(!checkout)
-      }
-
+    
 
 
     return (
@@ -81,7 +78,7 @@ const Cart = () => {
                                 <Link to="/">Continue Shopping</Link>
                                 <Link to="/wishlist">Your Wishlist</Link>
                             </div>
-                            <button className='secret-checkout' onClick={() => toggleCheckout()}>Checkout</button>
+
                         </div>
                    
                         <div className='bottom-div'>
@@ -116,7 +113,7 @@ const Cart = () => {
                           
                         </div>
 
-                        {checkout && <aside>
+                       <aside>
                             <h1 className='cart-heading2'>Order Summary</h1>
 
                             <div className='order'>
@@ -153,7 +150,7 @@ const Cart = () => {
                                 </p>
                             </div>
                            
-                        </aside>}
+                        </aside>
                         </div>
                    
                    

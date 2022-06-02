@@ -8,9 +8,7 @@
     padding-right: 20px;
     padding-left: 20px;
     background-color: #fcf5f5;
-    padding-bottom: 50px;
-  
-    
+    padding-bottom: 50px;  
 }
 
 .fav-container {
@@ -21,7 +19,6 @@
     background-color: whitesmoke;
     margin-top: 30px;
     position: relative;
-   
 }
 
 .img-overlay {
@@ -195,4 +192,42 @@
     .secret-btn:active {
         transform: translateY(3px)
     }
+}
+
+@media screen and (max-width: 500px) {
+    .fav-container {
+        width: 30%;
+        height: 180px;
+        margin-right: 5px;
+        margin-bottom: 150px;
+        background-color: whitesmoke;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .fav-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 80px;
+        padding-right: 20px;
+        padding-left: 20px;
+        background-color: #fcf5f5;
+        padding-bottom: 100px;  
+    }
+
+    .secret-btn {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        margin-top: 12px;
+        padding: 7px;
+        width: 100%;
+    }
+
+    .fav-title {
+        font-size: 12px;
+    }
+    
 }

@@ -6,8 +6,7 @@
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
-    margin-top: 100px;
-   
+    margin-top: 100px; 
 }
 
 .left-arrow, .right-arrow {
@@ -59,8 +58,7 @@
     width: 35%;
     margin-top: 30px;
     margin-right: 60px;
-    margin-left: 100px;
-    
+    margin-left: 100px;   
 }
 
 
@@ -126,11 +124,15 @@ img {
     }
 
     .image-container {
-        width: 30%;   
+        width: 35%;
+        margin-top: 30px;
+        margin-right: 60px;
+        margin-left: 100px;
+        
     }
 
     .text-container h2 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .text-container p {
@@ -156,6 +158,58 @@ img {
     .right-arrow {
         top: 50%;
         bottom: auto;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .slider {
+        margin-top: 20px;
+        height: 40vh;
+        padding-top: 20px;
+        margin-top: 0px; 
+    }
+
+    .left-arrow, .right-arrow {
+        width: 42px;
+        height: 42px;
+        background-color: lightgrey;
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    .text-container h2 {
+        font-size: 18px;
+    }
+
+    .text-container p {
+        width: 80%;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        margin-top: -5px;
+        visibility: hidden;
+    }
+    
+    .shop-btn {
+        font-size: 10px;
+        letter-spacing: 3px;
+        font-weight: 500;
+        margin-top: -25px;
+        padding: 8px;
+    }
+
+    .image-container {
+        width: 30%;  
+        margin-top: 50px;
+        margin-right: 5px;
+        margin-left: 10px; 
+ 
+    }
+
+    .wrapper {
+        height: auto;
+        padding-top: 140px;
     }
 }
 

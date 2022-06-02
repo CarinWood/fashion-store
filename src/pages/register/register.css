@@ -36,15 +36,12 @@ form {
     margin-bottom: 30px;
     background-color: #fcf5f5;
     outline: none;
-   
 }
 
 #checkbox {
     margin-right: 10px;
     cursor: pointer;
 }
-
-
 
 .create-btn {
     background: teal;
@@ -76,4 +73,52 @@ form {
     form {
         width: 80%;
     }
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .create-heading {
+        font-size: 28px;
+        letter-spacing: 3px;
+        color: #fcf5f5;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    
+
+    .field {
+        font-size: 20px;
+        padding: 5px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+        background-color: #fcf5f5;
+        outline: none;
+    }
+
+    .privacy-policy {
+        width: 60%;
+        font-size: 12px;
+        text-align: left;
+        color: #fcf5f5;
+        margin-bottom: 30px;
+    
+    }
+
+    .create-btn {
+        margin: 0px;
+        font-size: 18px;
+        letter-spacing: 3px;
+        padding: 8px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    
 }

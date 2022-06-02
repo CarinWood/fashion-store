@@ -48,6 +48,10 @@
     text-decoration: none;
 }
 
+#copyright {
+    background-color: #fcf5f5;
+}
+
 
 @media screen and (max-width: 992px) {
     .footer-container {

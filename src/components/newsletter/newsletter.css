@@ -62,7 +62,7 @@
 @media screen and (max-width: 500px) {
     .news {
         padding-top: 0px;
-        height: 50vh;
+        height: 60vh;
     }
     .news-heading {
         font-size: 28px;

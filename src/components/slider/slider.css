@@ -93,15 +93,18 @@ img {
 }
 
 .shop-btn {
-    
-    background: whitesmoke;
-    color: black;
     font-size: 20px;
     letter-spacing: 3px;
-    font-weight: 500;
     margin-top: 30px;
     padding: 8px;
-   cursor: pointer;
+    border-radius: 2.5px;
+    border: 0.9px solid gray;
+    padding: 12px;
+    background: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0.8px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
 }
 
 .shop-btn:active {
@@ -165,18 +168,21 @@ img {
 @media screen and (max-width: 500px) {
     .slider {
         margin-top: 20px;
-        height: 40vh;
-        padding-top: 20px;
-        margin-top: 0px; 
+        padding-top: 100px;
+        height: 60vh;
     }
 
     .left-arrow, .right-arrow {
-        width: 42px;
-        height: 42px;
+        width: 0.1px;
+        height: 0.1;
         background-color: lightgrey;
-        font-size: 24px;
+        font-size: 0.1px;
         margin-top: 30px;
         visibility: hidden;
+    }
+
+    .wrapper {
+        top: 0;
     }
     .text-container h2 {
         font-size: 20px;
@@ -194,11 +200,17 @@ img {
     }
     
     .shop-btn {
-        font-size: 12px;
-        letter-spacing: 3px;
-        font-weight: 500;
-        margin-top: 10px;
-        padding: 8px;
+        font-size: 15px;
+        border-radius: 2.5px;
+        border: 0.9px solid gray;
+        width: 140px;
+        padding: 7px;
+        background: transparent;
+        color: var(--primary-color);
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        box-shadow: 0.8px 2px rgba(0, 0, 0, 0.5);
+        font-weight: 400;
     }
 
     .image-container {
@@ -209,10 +221,6 @@ img {
  
     }
 
-    .wrapper {
-        height: auto;
-        padding-top: 140px;
-    }
 }
 
 

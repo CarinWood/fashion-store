@@ -464,9 +464,10 @@ aside {
 
 @media screen and (max-width: 500px) {
 
-    .cart-cotainer {
+    .cart-container {
         position: relative;
-        height: auto;   
+        height: auto;  
+        max-width: 100%;
     }
 
     .link-wrapper {
@@ -481,13 +482,13 @@ aside {
       justify-content: center;
       align-items: center;
       margin-bottom: 100px;
-      margin-top: -70px;
+      margin-top: -200px;
     }
 
     .main {
         width: 100%;
         position: absolute;
-        min-height: 200px;
+        height: 80vh;
     }
 
     .cart-heading2 {
@@ -542,7 +543,6 @@ aside {
 
     .bottom-div {
         max-width: 90%;
-        margin-bottom: 50px;
         position: relative;
     }
 
